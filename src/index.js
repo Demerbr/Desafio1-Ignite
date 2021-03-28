@@ -30,7 +30,7 @@ app.post('/users', (request, response) => {
   const userExist = users.find(user => user.username === username)
   
   if(userExist){
-      return response.status(400).json({ error: "usuário ja existe!"})
+      return response.status(400).json({ error: "user already exists"})
   }
 
   const user = {
